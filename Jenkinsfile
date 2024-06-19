@@ -1,6 +1,6 @@
 pipeline{
     environment{
-        DOCKERHUB_CREDENTIALS=credential('Jenkins_Dockerhub')
+        DOCKERHUB_CREDENTIALS=credential('channoufi_docker_jenkins')
                 }
     agent any
     stages{
