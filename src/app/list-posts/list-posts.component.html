@@ -1,0 +1,19 @@
+<h2 align="center">Liste des posts</h2>
+<table align="center" border="1" class="table">
+  <thead>
+    <tr>
+      <th>ID User</th>
+      <th>ID Post</th>
+      <th>Title</th>
+      <th>Post</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{post.userId}}</td>
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+    </tr>
+  </tbody>
+</table>

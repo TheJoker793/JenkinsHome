@@ -1,0 +1,29 @@
+<h2 align="center">Liste des medecins</h2>
+
+<img [src]="logo"/>
+<ul>
+  <li *ngFor="let medecin of medecins">{{medecin}}</li>
+</ul>
+Taper votre nom : {{formation}} <input [(ngModel)]="formation" type="text" class="form-control"/>
+<br/>
+<button type="button" class="btn btn-primary">Primary</button>
+<table align="center" border="1" class="table">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Age</th>
+      <th>Grade</th>
+      <th>Photo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of medecinsDetails">
+      <td>{{m.nom}}</td>
+      <td>{{m.prenom}}</td>
+      <td>{{m.age}}</td>
+      <td>{{m.grade}}</td>
+      <td><img  [src]="m.photo" width="100px"/></td>
+    </tr>
+  </tbody>
+</table>

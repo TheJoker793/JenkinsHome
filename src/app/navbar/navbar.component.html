@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">AMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="listeProviders"
+          routerLinkActive="active">Liste Providers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="addProvider" routerLinkActive="active">Add
+          Provider</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="contact"
+          routerLinkActive="active">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" *ngIf="!loginService.isUserLoggedIn()"
+          routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link" routerLink="/logout" *ngIf="loginService.isUserLoggedIn()"
+          routerLinkActive="active">LogOut</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

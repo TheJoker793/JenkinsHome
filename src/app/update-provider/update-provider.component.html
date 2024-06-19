@@ -1,0 +1,19 @@
+<h2 align="center">Update Provider</h2>
+
+
+  <div class="form-group">
+    <label for="nom">Name</label>
+    <input [(ngModel)]="name" required  type="text" class="form-control" id="nom" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input [(ngModel)]="address" type="text" class="form-control" id="address" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [(ngModel)]="email" required type="email" class="form-control" id="email" aria-describedby="emailHelp">
+  </div>
+
+  <button  class="btn btn-primary" (click)="saveUpdatedProvider()">Modifier</button>
+
+
